@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: docker
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Image
+          command: |
+            docker build -t eyenx/znc . 
+      - run:
+          name: Test Image
+          command: |
+            docker run eyenx/znc --help
+      - run:
+          name: Push Image
+          command: |
+            echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin && docker tag eyenx/znc:latest eyenx/znc:$CIRCLE_SHA1 && docker push eyenx/znc:latest && docker push eyenx/znc:$CIRCLE_SHA1
