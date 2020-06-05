@@ -1,8 +1,8 @@
 # docker-znc
 
 
+![](https://github.com/eyenx/docker-znc/workflows/build/badge.svg)
 [![](https://images.microbadger.com/badges/image/eyenx/znc.svg)](https://microbadger.com/images/eyenx/znc "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/eyenx/znc.svg)](https://microbadger.com/images/eyenx/znc "Get your own version badge on microbadger.com")
-[![Circle CI](https://circleci.com/gh/eyenx/docker-znc.svg?style=svg)](https://circleci.com/gh/eyenx/docker-znc)
 
 
 [ZNC](https://znc.in) in a container with curl-dev
