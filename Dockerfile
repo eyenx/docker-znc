@@ -1,2 +1,3 @@
-FROM znc
-RUN apk --update add curl-dev znc-dev
+	
+FROM	znc
+RUN	apk --update add curl-dev znc-dev
